@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-<body></body>
-<h1>
-<div id="ievade"></div>
+        <meta charset="UTF-8"/>
+        <title> Trijstura kalkulators </title>
+        <link rel="stylesheet" href="style.css" />
+    </head>   
+<body>
+    <div id="galva">
+<h1>Trijstūra kalkulators</h1>
+<p> Kalkulatros paredzēts trijstūra perimetra un laukuma aprēķināšanai.</p>
+</div>
+<div id="ievade">
+<h2> Ievadi trīs malu garumus:</h2>
+
 <input class="mala" type="text" id="mala1" value="0.00"/>
 <input class="mala" type="text" id="mala2" value="0.00"/>
 <input class="mala" type="text" id="mala3" value="0.00"/>
-
-<Button onClick="izvadaTekstu()"OK>
-    </Button>
-
-    </head>
+<button onClick="izvadaTekstu()" OK>
+    </button>
+</div>
+<div id="izvade"></div>
+<script type="text/javascript" src="script.js"></script>
+<img src="data:image/png;base64,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"
+</body>
 </html>

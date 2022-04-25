@@ -43,25 +43,25 @@ function irTrijsturis(m1,m2,m3){
 }
 function rezultats() {
  const m=nolasa();
-m1+m.m1;m2=m.m2;m3=m.m3;
+m1=m.m1;m2=m.m2;m3=m.m3;
 console.log(m1,m2,m3);
 if (!nolasa()){
 t="Nekorekti ievaddati, trijstura malu vertibām ir jābūt lielākam par nulli";
 } else {
-    if (irTrijsturis(M1,M2,M3)==false){
+    if (irTrijsturis(m1,m2,m3)==false){
         t="Trijsturis neeksistē. jo jebkuru 2 malu garumu summai ir jābūt lielākai par trešo malu!";
     }else{
-        t="Trijstūris ar malu garumiem"+m1+","+m2+"un"+m3+"eksistē.";
-        if (m1==m2 && m2==m3){
-            t+="Tas ir vienādmalu trijstūris";
+        t="Trijstūris ar malu garumiem"+" "+m1+","+" "+m2+" "+"un"+" "+m3+" "+"eksistē.";
+        if (m1==m2 && m2==m3 && m3==m1){
+            t="Tas ir vienādmalu trijstūris";
         } else{
             if(m1==m2 || m2==m3 || m1==m3){
 
             }
         }
-    const p=perimets(m1.m2,m3);
-    const s=Math.round(laukumms(m1,m2,m3)*100)/100;
-t+="Perimetrs ir"+p+"un laukums ir"+s+".";
+    const p=perimetrs(m1.m2,m3);
+    const s=Math.round(laukums(m1,m2,m3)*100)/100;
+t+="Perimetrs ir"+" "+p+" "+"un laukums ir"+" "+s+".";
 }
 }
 console.log(t);
